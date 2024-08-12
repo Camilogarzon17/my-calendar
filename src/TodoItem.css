@@ -1,0 +1,62 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-item.completed p {
+  text-decoration: line-through;
+}
+
+.todo-item .complete {
+  color: green;
+  cursor: pointer;
+}
+
+.todo-item .delete {
+  color: red;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-title {
+  text-align: left !important;
+  margin-right: auto !important;
+  margin-left: 10px !important;
+}
+
+.todo-date {
+  text-align: center; /* Centra la fecha dentro de su contenedor */
+  margin-right: 30px; /* Espacio entre el título y la fecha */
+  white-space: nowrap; /* Evita el ajuste de línea para la fecha */
+}
+
+.complete.checked {
+  border: 2px solid green; /* Estilo de subrayado, por ejemplo */
+}
+
+/* Estilo general para el botón de completar */
+.complete {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilo para cuando el botón está deshabilitado */
+.complete.disabled {
+  opacity: 0.5;
+  filter: blur(2px);
+  cursor: not-allowed;
+}
+
+/* Estilo para tareas completadas */
+.todo-item.completed p {
+  text-decoration: line-through;
+}

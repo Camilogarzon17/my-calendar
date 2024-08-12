@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+.todo-search-container {
+  position: relative;
+  width: 100%; /* Hace que el contenedor ocupe el 100% del ancho disponible */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  right: 10px;
+}
+
+.todo-search-input {
+  border-radius: 20px;
+  padding: 10px 10px 10px 40px; /* Ajusta el padding para el espacio del ícono */
+  border: 2px solid hsla(166, 100%, 50%, 0.7); /* Contorno más grueso */
+  outline: none;
+  background-color: hsl(0, 0%, 99%); /* Fondo de color especificado */
+  color: hsl(0, 0%, 0%); /* Color del texto */
+  font-family: "Gochi Hand", cursive;
+  font-size: 15px;
+}
+
+.todo-search-icon {
+  margin-left: -30px; /* Posiciona la lupa dentro del input */
+  width: 20px;
+  height: 20px;
+  color: hsla(166, 100%, 50%, 0.7); /* Color de la lupa */
+  pointer-events: none; /* Hace que la lupa no sea clicable */
+}

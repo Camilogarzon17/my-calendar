@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+.add-task-container {
+  position: relative;
+  width: 100%; /* Hace que el contenedor ocupe el 100% del ancho disponible */
+  display: flex;
+  justify-content: flex-end; /* Alinea el botón a la derecha */
+  align-items: center;
+}
+
+.add-task-button {
+  background-color: hsla(166, 100%, 50%, 0.7); /* Color de fondo */
+  border: 2px solid hsla(166, 100%, 50%, 0.7); /* Contorno del botón */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Ajusta el espacio interno */
+  border-radius: 20px; /* Bordes redondeados */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-family: "Gochi Hand", cursive;
+  font-size: 20px;
+}
+
+.add-task-button:hover {
+  background-color: hsla(
+    166,
+    100%,
+    50%,
+    0.9
+  ); /* Fondo más oscuro al hacer hover */
+  border-color: hsla(
+    166,
+    100%,
+    50%,
+    0.9
+  ); /* Contorno más oscuro al hacer hover */
+}
+
+.add-task-icon {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+  width: 20px;
+  height: 20px;
+  color: white; /* Color del ícono */
+}
+
+.custom-modal {
+  background-color: white;
+  border: 1px solid hsla(166, 100%, 50%, 0.9);
+  border-radius: 10px;
+  width: 25%;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  top: 25%;
+  transform: translateY(-50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.custom-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo difuminado */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+.custom-modal label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  align-content: center;
+}
+
+.custom-modal input[type="text"],
+.custom-modal input[type="date"],
+.custom-modal input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid hsla(166, 100%, 50%, 0.7); /* Borde de los inputs */
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9; /* Fondo claro para los inputs */
+  font-family: "Gochi Hand", cursive;
+
+}
+
+.custom-modal .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.custom-modal button[type="submit"] {
+  background-color: hsla(166, 100%, 50%, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-modal button[type="submit"]:hover {
+  background-color: hsla(
+    166,
+    100%,
+    50%,
+    0.9
+  ); /* Oscurece el botón al pasar el cursor */
+}
+
+.custom-modal button[type="button"] {
+  background-color: hsl(0.4deg 72.25% 59.02%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-modal button[type="button"]:hover {
+  background-color: hsl(
+    0.4deg 72.25% 49.02%
+  ); /* Oscurece el botón de cancelar al pasar el cursor */
+}
+
+.custom-modal form div {
+  display: flex;
+}
+
+
+.cancel-icon {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    width: 20px;
+    height: 20px;
+    color: white; /* Color del ícono */
+  }
+  
+
+  /* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .custom-modal {
+      width: 80%; /* Ajusta el ancho para móviles */
+      max-width: 100%; /* Asegura que el modal no exceda el ancho de la pantalla */
+      padding: 15px; /* Ajusta el padding para móviles */
+      border-radius: 5px; /* Bordes ligeramente menos redondeados */
+      transform: translateY(0); /* Elimina la traslación vertical para centrar mejor */
+      top: 0; /* Ajusta la posición superior */
+    }
+  }
+  

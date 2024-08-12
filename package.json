@@ -2,8 +2,16 @@
   "name": "platzi-intro-react-base",
   "version": "0.1.0",
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "@react-oauth/google": "^0.12.1",
+    "date-fns-tz": "^3.1.3",
+    "gapi-script": "^1.2.0",
+    "googleapis": "^105.0.0",
+    "moment-timezone": "^0.5.45",
+    "platzi-intro-react-base": "file:",
     "react": "^18",
     "react-dom": "^18",
+    "react-modal": "^3.16.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
