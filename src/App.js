@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { AddTodoButton } from "./AddTodoButton";
+import { TodoCounter } from "./TodoCounter/TodoCounter";
+import { TodoSearch } from "./TodoSearch/TodoSearch";
+import { TodoList } from "./TodoList/TodoList";
+import { AddTodoButton } from "./AddTodoButton/AddTodoButton";
 import "./App.css";
-import computer from "./computer.svg";
-
+import computer from "./././img/computer.svg"
 const clientId =
   "159936141692-qe3iqv259ldmf69pmv3cd52191g05ui8.apps.googleusercontent.com";
 
@@ -38,14 +37,14 @@ function App() {
   const loadCalendarEvents = () => {
     const now = new Date();
     const sevenDaysLater = new Date();
-    sevenDaysLater.setDate(now.getDate() + 7); // 7 días después
+    sevenDaysLater.setDate(now.getDate() + 7);
 
     gapi.client.load("calendar", "v3", () => {
       gapi.client.calendar.events
         .list({
           calendarId: "primary",
-          timeMin: now.toISOString(), // A partir de la fecha actual
-          timeMax: sevenDaysLater.toISOString(), // Hasta 7 días después
+          timeMin: now.toISOString(),
+          timeMax: sevenDaysLater.toISOString(),
           showDeleted: false,
           singleEvents: true,
           orderBy: "startTime",
@@ -99,13 +98,11 @@ function App() {
       )
     );
 
-    // Actualizar el estado en localStorage
     localStorage.setItem(
       eventToComplete.id,
       JSON.stringify(updatedEvent.completed)
     );
 
-    // Actualizar la tarea en Google Calendar si es necesario
     if (!eventToComplete.completed) {
       gapi.client.calendar.events
         .patch({
@@ -113,7 +110,6 @@ function App() {
           eventId: eventToComplete.id,
           resource: {
             status: "completed",
-            // Add any other required fields if needed (check API documentation)
           },
         })
         .then(() => {
@@ -135,7 +131,7 @@ function App() {
         eventId: eventToDelete.id,
       })
       .then(() => {
-        localStorage.removeItem(eventToDelete.id); // Eliminar el estado en localStorage
+        localStorage.removeItem(eventToDelete.id);
         setEvents(events.filter((event) => event.id !== eventToDelete.id));
       })
       .catch((error) => {

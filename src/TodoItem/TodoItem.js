@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./TodoItem.css";
-import check from "./casilla-de-verificacion-marcada.png";
-import cancel from "./cancelar.png";
+import check from "../././img/casilla-de-verificacion-marcada.png";
+import cancel from "../././img/cancelar.png";
 
 function TodoItem({ event, onComplete, onDelete }) {
   const [isCompleted, setIsCompleted] = useState(event.completed);

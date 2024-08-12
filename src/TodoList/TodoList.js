@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoItem } from "./TodoItem";
+import { TodoItem } from "../TodoItem/TodoItem";
 
 function TodoList({ events, onComplete, onDelete, searchTerm }) {
   // Filtra eventos para mostrar solo la primera instancia
