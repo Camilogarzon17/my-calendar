@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
-import { TodoCounter } from "./TodoCounter/TodoCounter";
+import { TodoCounter } from "./Components/TodoCounter/TodoCounter";
 import { TodoSearch } from "./TodoSearch/TodoSearch";
-import { TodoList } from "./TodoList/TodoList";
+import { TodoList } from "./Components/TodoList/TodoList";
 import { AddTodoButton } from "./AddTodoButton/AddTodoButton";
 import "./App.css";
 import computer from "./././img/computer.svg"
